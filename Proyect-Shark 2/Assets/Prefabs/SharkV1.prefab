@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 8027007235106212871}
   - component: {fileID: 6398052769427620770}
   - component: {fileID: 9164407777418868584}
-  - component: {fileID: 7561282023886141487}
-  - component: {fileID: 7561282023886141484}
   - component: {fileID: 7561282023886141480}
+  - component: {fileID: 8748145753461005010}
   m_Layer: 0
   m_Name: SharkV1
   m_TagString: Player
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7218839338859058877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 878.23395, y: 4.59, z: 594.00037}
-  m_LocalScale: {x: 3.1956, y: 3.1956, z: 3.1956}
+  m_LocalScale: {x: 6.5343633, y: 6.5343633, z: 6.5343633}
   m_Children:
   - {fileID: 7561282023832639560}
   m_Father: {fileID: 0}
@@ -85,35 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &7561282023886141487
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7218839338859058877}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &7561282023886141484
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7218839338859058877}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.551586, y: 1.8705175, z: 1.9762528}
-  m_Center: {x: -2.1795864, y: 0.2958555, z: 0.06939013}
 --- !u!114 &7561282023886141480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +97,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  rotateSens: 2
   lifePlayer: 20
+--- !u!143 &8748145753461005010
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218839338859058877}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2.4622283
+  m_Radius: 2.6
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7561282023832639561
 GameObject:
   m_ObjectHideFlags: 0
