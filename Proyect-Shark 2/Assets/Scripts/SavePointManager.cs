@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SavePointManager : MonoBehaviour
-{
-    [SerializeField] List<Transform> Savepoint = new List<Transform>();
+{}
+   //[SerializeField] List<Transform> Savepoint = new List<Transform>();
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         foreach (Transform savepoint in transform)
         {
@@ -29,4 +29,4 @@ public class SavePointManager : MonoBehaviour
     {
         return Savepoint[index];
     }
-}
+}*/

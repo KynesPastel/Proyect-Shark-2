@@ -7,6 +7,7 @@ public class PlayerEvent : MonoBehaviour
 {
     public static event Action onDeath;
     public static event Action onDamage;
+    public static event Action onComplete;
     // Start is called before the first frame update
     public static void OnDeath()
     {
@@ -14,6 +15,9 @@ public class PlayerEvent : MonoBehaviour
     }
     public static void OnDamage(){
         onDamage?.Invoke();
+    }
+     public static void OnComplete(){
+        onComplete?.Invoke();
     }
     
     void Start()

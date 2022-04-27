@@ -30,7 +30,7 @@ public class PlayerCollision : MonoBehaviour
 
         }*/
 
-        if (other.gameObject.CompareTag("Savepoint"))
+       /* if (other.gameObject.CompareTag("Savepoint"))
         {
             Debug.Log(other.name);
             SavePointManager managerSP = other.transform.parent.GetComponent<SavePointManager>();

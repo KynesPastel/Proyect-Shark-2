@@ -7,12 +7,15 @@ using TMPro;
 public class HUDManager : MonoBehaviour
 {[SerializeField] private TextMeshProUGUI textGameOver;
 [SerializeField] private Image imageDamage;
+[SerializeField] private Text textComplete;
+
 
 
     // Start is called before the first frame update
     private void Awake() {
        PlayerEvent.onDeath += EnableGameOverUI;
        PlayerEvent.onDamage += EnableDamageUI;
+        PlayerEvent.onComplete += EnableCompleteUI;
        
        //PlayerEvent.onDamage += EnableDamageUI;
     }
@@ -34,6 +37,11 @@ public class HUDManager : MonoBehaviour
         
      imageDamage.gameObject.SetActive(true);
     }
+    public void EnableCompleteUI(){
+        
+     imageDamage.gameObject.SetActive(true);
+    }
+  
 
    
 }

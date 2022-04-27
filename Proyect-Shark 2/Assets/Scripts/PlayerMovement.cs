@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = FindObjectOfType<SavePointManager>().GetSavePoint(GameManager.instancia.lastSP).position;
+        //transform.position = FindObjectOfType<SavePointManager>().GetSavePoint(GameManager.instancia.lastSP).position;
 
         PlayerMovement.OnDeath += GameOverBehavior;
 
@@ -31,23 +31,6 @@ public class PlayerMovement : MonoBehaviour
     {
         RotateShark();
         Move();
-
-
-
-
-
-        //SceneManager.LoadScene("Level");
-
-        /*
-        if (Input.GetKeyDown(KeyCode.G)) {
-            GameObject trash = GetComponent<InventoryManager>().GetInventoryOne();
-            trash.SetActive(true);
-        }*/
-
-
-
-    
-
 
     }
     //FUERZA
@@ -66,9 +49,7 @@ public class PlayerMovement : MonoBehaviour
         Quaternion angulo = Quaternion.Euler(0f, cameraAxisX, cameraAxisY);
         transform.localRotation = angulo;
     }
-    /* 
-         
-  */
+    
     //DESACTIVAR RIGIDBODY EN  TRY AGAIN
     public void GameOverBehavior()
     {
@@ -88,13 +69,13 @@ public class PlayerMovement : MonoBehaviour
             GameManager.instancia.speed++;
 
         }
-            //SAVEPOINT RETURN
-        if (other.gameObject.CompareTag("Savepoint"))
+        //SAVEPOINT RETURN
+       /* if (other.gameObject.CompareTag("Savepoint"))
         {
             Debug.Log(other.name);
             SavePointManager managerSP = other.transform.parent.GetComponent<SavePointManager>();
             managerSP.FindSavePoint(other.name);
-        }
+        }*/
     }
 
     //MOVIMIENTO AWSD
